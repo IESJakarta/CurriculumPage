@@ -22,7 +22,7 @@ list {
 h2a {
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: normal;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 h2b {
     font-family: 'Barlow Condensed', sans-serif;
@@ -139,6 +139,8 @@ hr {
     padding: 1%;
     border-radius: 10px;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+   -webkit-flex: 1 1 1;
+    flex: auto;
 }
 .flex-container_3B {
     display: -webkit-flex;
