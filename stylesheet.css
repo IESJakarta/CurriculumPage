@@ -1,0 +1,94 @@
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+div {
+    font-family: 'Barlow Condensed', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: normal;
+    margin-top: 2% !important;
+    line-height: 95% !important;
+}
+h2a {
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: normal;
+    color: rgb(0, 0, 0);
+}
+h4 {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: Black;
+    letter-spacing: normal;
+    margin-bottom: 2% !important;
+    line-height: 90% !important;
+    font-weight: bold;
+}
+hr { 
+    width: 100%;
+    border-style: inset;
+    border-width: 1.5px;
+}
+.flex-container_Base_A {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.flex-container_1 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    -webkit-align-items: center;
+    align-items: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-color: Gold;
+    padding: 1%;
+}
+.flex-container_2A {
+    display: -webkit-flex;
+    display: flex;
+    width: 95%;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+      -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    padding: 1%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+.flex-container_3A {
+    display: -webkit-flex;
+    display: flex;
+    margin: 2%;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background-color: var(--cur_Level_Box_Color);
+    padding: 1%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+   -webkit-flex: 1 1 1;
+    flex: auto;
+}
+.flex-item_2 {
+    display: -webkit-flex;
+    display: flex;
+    width: 95%;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}

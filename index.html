@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Cur Links</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="container" id="app">
+    <div class="flex-container_Base_A"  v-for="post in posts">
+      <hr />
+      <hr />
+      <hr />
+      <br>
+      <p style="text-align: center; font-size: 24px; font-weight: bold; font-style: italic;line-height: 0.8;">This page is for internal use only for IES Kids Leaders and Teachers.  Please do not share or distribute these links or their contents.</p>
+      <hr />
+      <hr />
+      <hr />
+      
+      <br>
+      <div class="flex-container_2A" :style="{ 'backgroundColor': post.Month_Card_Color }">
+          <h2><h2a :style="{ 'color': post.Title_Font_Color }">{{ post.Month }}</h2a></h2>
+            </div>
+          <br>
+          <div class="flex-container_2A" :style="{ 'backgroundColor': post.Month_Card_Color }">
+          <div class="flex-container_3A" :style="{ 'backgroundColor': post.Curriculum_level_box_Color }">
+            <div class="flex-item_2">
+          <h2><h2a :style="{ 'color': post.Title_Font_Color }">2-U<br>
+              {{ post.Month }} Curriculum Links</h2a></h2>
+          <h4><h2a :style="{ 'color': post.Title_Font_Color }">{{ post.Month }} Preview Video</h2a></h4>
+          <a v-bind:href="post.FL_2U_Month_Intro_Video_Link">Month Preview</a>
+          <h4><h2a :style="{ 'color': post.Title_Font_Color }">Leader Manuals</h2a></h4>
+          <span style="font-size: large;"><a v-bind:href="post.FL_2U_Leader_Manual_Compete_Link">Leader Manual Complete</a><br>
+          <a v-bind:href="post.FL_2U_Leader_Manual_Link">Leader Manual only</a><br>
+          <a v-bind:href="post.FL_2U_Activity_Pages_Link">Activity Pages</a></span>
+          <h4><h2a :style="{ 'color': post.Title_Font_Color }">Other Resources</h2a></h4>
+          <a v-bind:href="post.FL_2U_Music_Folder_Link">Music Resources</a>
+            </div>
+          </div>
+          <br>
+          <div class="flex-container_3A" :style="{ 'backgroundColor': post.Curriculum_level_box_Color }">
+            <div class="flex-item_2">
+          <h2><h2a :style="{ 'color': post.Title_Font_Color }">3to5<br>
+            {{ post.Month }} Curriculum Links</h2a></h2>
+          <h4><h2a :style="{ 'color': post.Title_Font_Color }">{{ post.Month }} Preview Video</h2a></h4>
+          <a v-bind:href="post.FL_3to5_Month_Intro_Video_Link">Month Preview</a>
+          <h4><h2a :style="{ 'color': post.Title_Font_Color }">Leader Manuals</h2a></h4>
+          <span style="font-size: large;"><a v-bind:href="post.FL_3to5_Leader_Manual_Compete_Link">Leader Manual Complete </a><br>
+          <a v-bind:href="post.FL_3to5_Leader_Manual_Link">Leader Manual Only</a><br>
+          <a v-bind:href="post.FL_3to5_Activity_Pages_Link">Activity Pages</a></span>
+          <h4><h2a :style="{ 'color': post.Title_Font_Color }">Other Resources</h2a></h4>
+          <a v-bind:href="post.FL_3to5_Music_Folder_Link">Music Resources</a>
+            </div>
+          </div>
+          <br>
+          <div class="flex-container_3A" :style="{ 'backgroundColor': post.Curriculum_level_box_Color }">
+            <div class="flex-item_2">
+          <h2><h2a :style="{ 'color': post.Title_Font_Color }">6-10<br>
+            {{ post.Month }} Curriculum Links</h2a></h2>
+          <h4><h2a :style="{ 'color': post.Title_Font_Color }">{{ post.Month }} Preview Video</h2a></h4>
+          <a v-bind:href="post.O_252_6to10_Kids_Monthly_Intro_Video_Link">Month Preview</a>
+          <h4><h2a :style="{ 'color': post.Title_Font_Color }">Leader Manuals</h2a></h4>
+          <span style="font-size: large;"><a v-bind:href="post.O_252_6to10_Kids_Leader_Manual_Compete_Link">Leader Manual Complete</a><br>
+          <a v-bind:href="post.O_252_6to10_Kids_Leader_Manual_Link">Leader Manual only</a></span>
+          <h4><h2a :style="{ 'color': post.Title_Font_Color }">Other Resources</h2a></h4>
+          <a v-bind:href="post.O_252_6to10_Kids_Music_Folder_Link">Music Resources</a>
+          <a v-bind:href="post.O_252_6to10_Kids_Activity_Pages_Link">Activity Pages</a>
+            </div>
+          </div>
+          </div>
+          <br>
+        </div>
+    </div>
+  </body>  
+  <script src="https://unpkg.com/vue"></script>
+  <script  language="JavaScript"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="vueApp.js"></script>
+</html>
