@@ -80,11 +80,11 @@ hr {
     -webkit-flex-direction: column;
     flex-direction: column;
     background-color: tan;
-    padding: 1%;
+    padding: 3%;
     border-radius: 10px;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-   -webkit-flex: 1 1 1;
-    flex: auto;
+    -webkit-flex-basis: 250px;
+    flex-basis: 250px;
 }
 .flex-item_2 {
     display: -webkit-flex;
