@@ -53,8 +53,6 @@ hr {
     -webkit-flex-direction: column;
     -webkit-justify-content: center;
     justify-content: center;
-    background-color: Gold;
-    padding: 1%;
 }
 .flex-container_2A {
     display: -webkit-flex;
