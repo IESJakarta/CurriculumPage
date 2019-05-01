@@ -1,5 +1,6 @@
 body {
     font-family: 'Barlow Condensed', sans-serif;
+    font-size: 26px;
 }
 div {
     font-family: 'Barlow Condensed', sans-serif;
@@ -8,12 +9,14 @@ h1, h2, h3 {
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: normal;
     margin-top: 2% !important;
-    line-height: 95% !important;
+    line-height: 100% !important;
 }
 h2a {
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: normal;
     color: rgb(0, 0, 0);
+    font-size: 120%;
+    text-align:center;
 }
 h4 {
     font-family: 'Barlow Condensed', sans-serif;
@@ -74,11 +77,20 @@ hr {
     -webkit-flex-direction: column;
     flex-direction: column;
     background-color: tan;
-    padding: 3%;
+    padding: 2%;
     border-radius: 10px;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-    -webkit-flex-basis: 350px;
-    flex-basis: 350px;
+    -webkit-flex-basis: 380px;
+    flex-basis: 380px;
+}
+.flex-item_1 {
+    display: -webkit-flex;
+    display: flex;
+    width: 95%;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
 }
 .flex-item_2 {
     display: -webkit-flex;
