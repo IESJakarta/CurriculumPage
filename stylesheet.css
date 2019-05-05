@@ -131,7 +131,7 @@ hr {
     border-radius: 10px;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     -webkit-flex: 1 1 1;
-    flex: 1 0 400px;
+    flex: 1 0 50%;
 }
 .flex-item_SpItems {
     display: -webkit-flex;
@@ -143,11 +143,11 @@ hr {
     flex-direction: column;
     justify-content: center;
     background-color: rgb(141, 185, 170);
-    padding: 3%;
+    padding: 2%;
     border-radius: 10px;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     -webkit-flex: 1 1 1;
-    flex: 1 0 300px;
+    flex: 1 0 35%;
 }
 .flex-container_Sp {
     display: -webkit-flex;
