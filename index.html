@@ -27,7 +27,7 @@
           <div class="flex-item_SpText">
             <h2 style="text-align:center; margin-bottom: 0em;"><h2a :style="{ 'color': post.Title_Font_Color }">Special Anouncement</h2a></h2>
             <hr>
-            <div class="flex-item_L"><p>Join us for IES Kids Volunteer Training Day - May 18.<br>
+            <div class="flex-item_L" :style="{ 'backgroundColor': post.Curriculum_level_box_Color }"><p>Join us for IES Kids Volunteer Training Day - May 18.<br>
           This is a good time for us to re-evaluate what Kids Church is all about, 
             get up-to-date on what’s going on at IES Kids Ministry, and get to know the
              other volunteers.<br>
@@ -36,7 +36,7 @@
           <a href="https://iesjakarta.churchcenter.com/registrations/events/236708" target="_blank">Register Here</a></p>
         </div>
         </div>
-        <div class="flex-item_SpItems">
+        <div class="flex-item_SpItems"  :style="{ 'backgroundColor': post.Curriculum_level_box_Color }">
           <a href="https://iesjakarta.churchcenter.com/registrations/events/236708" target="_blank">
         <img src="medium_ies_kids_ministry_Volunteer_Training_Day_May_18.jpg"
              style="width: 90%;height: auto%;"></a>
