@@ -1,4 +1,4 @@
-const url = "https://api.steinhq.com/v1/storages/5d0374a0e8f87532b83a4e3b/SpAnnouncementTest_Output";  
+const url = "https://api.steinhq.com/v1/storages/5d0374a0e8f87532b83a4e3b/TestSpAnnouncement_Output";  
 const vm = new Vue({
   el: '#SpAnnounce',
   data: {
@@ -11,7 +11,7 @@ const vm = new Vue({
     }
 });
 
-const urll = "https://api.steinhq.com/v1/storages/5d0374a0e8f87532b83a4e3b/CurLinkTest_Output";  
+const urll = "https://api.steinhq.com/v1/storages/5d0374a0e8f87532b83a4e3b/TestCurLink_Output";  
 const vml = new Vue({
   el: '#CurLinks',
   data: {
