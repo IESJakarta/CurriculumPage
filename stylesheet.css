@@ -117,6 +117,19 @@ hr {
     align-items: right;
     text-align:right;
 }
+.flex-container_SpCard {
+    display: -webkit-flex;
+    display: flex;
+    width: 95%;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-color: olive;
+    padding: 1%;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
 .flex-item_SpText {
     display: -webkit-flex;
     display: flex;
@@ -149,16 +162,13 @@ hr {
     -webkit-flex: 1 0 35%;
     flex: 1 0 35%;
 }
-.flex-container_Sp {
+.flex-container_BaseSp {
     display: -webkit-flex;
     display: flex;
     width: 95%;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-    flex-direction: row;
-    -webkit-flex-direction: row;
     background-color: olive;
-    align-items: space-around;
     align-content: center;
     padding: 1%;
     border-radius: 20px;
