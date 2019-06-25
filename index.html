@@ -10,18 +10,19 @@
   </head>
   <body>
       <div class="flex-container__BaseSp" id="SpAnnounce">
+          <span v-cloak>
           <br>
         <div class="flex-container_1" v-for="announce in announcements">
           <div class="flex-container_SpCard" :style="{ 'backgroundColor': announce.Card_Color }">
-            <div class="flex-item_SpText"  style="text-align:center" :style="{ 'backgroundColor': announce.Box_Color }">
+            <div class="flex-item_SpText" :style="{ 'backgroundColor': announce.Box_Color }">
             <h2><h2a :style="{ 'color': announce.Title_Font_Color }">{{ announce.Special_Announcement_Title }}</h2a></h2>
             <div style="text-align:center"><span v-html="announce.Special_Announcement_Text"></span></div>
-            <div v-if="announce.Special_Announcement_Link.length"><br>
+            <div v-if="announce.Special_Announcement_Link"><br>
               <a v-bind:href="announce.Special_Announcement_Link" target="_blank">{{ announce.Special_Announcement_Title }} </a>
             </div>
             </div>
             <div class="flex-item_SpItems" :style="{ 'backgroundColor': announce.Box_Color }" 
-            v-if="announce.Special_Announcement_Graphic_Link.length > 0">
+            v-if="announce.Special_Announcement_Graphic_Link">
             <a v-bind:href="announce.Special_Announcement_Link" target="_blank">
               <img style='height: 100%; width: 100%; object-fit: contain' :src="announce.Special_Announcement_Graphic_Link">
             </a>
@@ -29,10 +30,12 @@
           </div>
           <br>
         </div>
+        </span>
       </div>
     <br>
     <br>
     <div class="flex-container_Base_A" id="CurLinks">
+        <span v-cloak>
         <div class="flex-container_1"  v-for="link in links">
           <hr />
           <hr />
@@ -104,6 +107,7 @@
               </div>
               <br>
             </div>
+          </span>
         </div>
   </body>  
   <script src="https://unpkg.com/vue"></script>
