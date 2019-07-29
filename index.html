@@ -104,7 +104,26 @@
               <a v-bind:href="link.O_252_6to10_Kids_Activity_Pages_Link" target="_blank">Activity Pages</a>
                 </div>
               </div>
+              <br>
+              <div class="flex-container_3A" :style="{ 'backgroundColor': link.Curriculum_level_box_Color }">
+                <div class="flex-item_1">
+              <h2><h2a :style="{ 'color': link.Title_Font_Color }">PreTeens<br>
+                {{ link.Month }} Curriculum Links</h2a></h2>
               </div>
+            <div class="flex-item_2">
+              <h4><h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Leader Manuals</h2a></h4>
+              <span style="font-size: 100%;"><a v-bind:href="link.Week_1_All_In_One" target="_blank">Week 1 - All in one.pdf</a><br>
+              <a v-bind:href="link.Week_2_All_In_One" target="_blank">Week 2 - All in one.pdf</a></span>
+              <a v-bind:href="link.Week_3_All_In_One" target="_blank">Week 3 - All in one.pdf</a>
+              <a v-bind:href="link.Week_4_All_In_One" target="_blank">Week 4 - All in one.pdf</a>
+              <a v-if="link.Week_5_All_In_One !== null" v-bind:href="link.Week_5_All_In_One" target="_blank">Week 5 - All in one.pdf</a>
+              <h4><h2a :style="{ 'color': link.Title_Font_Color }">Other Resources</h2a></h4>
+              <a v-bind:href="link.Resources_Folder" target="_blank">Resources Folder</a>
+            </div>
+              </div>
+              </div>
+            </div>
+
               <br>
             </div>
           </span>
