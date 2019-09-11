@@ -32,17 +32,7 @@ hr {
     border-width: 1.5px;
 }
 .flex-container_Base_A {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
     width: 100%;
-    -webkit-align-items: center;
-    align-items: center;
-    flex-direction: column;
-    -webkit-flex-direction: column;
-    -webkit-justify-content: center;
-    justify-content: center;
 }
 .flex-container_1 {
     display: -webkit-flex;
@@ -60,35 +50,39 @@ hr {
 .flex-container_2A {
     display: -webkit-flex;
     display: flex;
-    width: 95%;
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
+    width: 100%;
+    flex: 1;
     -webkit-justify-content: center;
     justify-content: center;
     background-color: olive;
-    padding: 1%;
+    padding: .1%;
     border-radius: 20px;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
+.grid_Internal {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 30px;
+    grid-column-gap: 30px;
+    margin: 30px;
+    width: 95%;
+}
 .flex-container_3A {
-        display: -webkit-flex;
-        display: flex;
-        margin: 2%;
-        -webkit-align-items: flex-start;
-        align-items: flex-start;
-        -webkit-flex-direction: column;
-        flex-direction: column;
-        background-color: rgb(141, 185, 170);
-        padding: 1%;
-        border-radius: 10px;
-        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-        -webkit-flex: 1 1 1;
-        flex: 1 1 1;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    background-color: rgb(141, 185, 170);
+    border-radius: 15px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 }
 .flex-item_1 {
     display: -webkit-flex;
     display: flex;
     width: 95%;
+    margin: 3%;
     -webkit-flex-direction: column;
     flex-direction: column;
     align-items: center;
@@ -98,6 +92,7 @@ hr {
     display: -webkit-flex;
     display: flex;
     width: 95%;
+    margin: 3%;
     -webkit-flex-direction: column;
     flex-direction: column;
     flex: 1;
