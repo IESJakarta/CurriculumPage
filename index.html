@@ -60,6 +60,11 @@
               <h2><h2a :style="{ 'color': link.Title_Font_Color }">2-U<br>
                   {{ link.Month }} Curriculum Links</h2a></h2>
                 </div>
+                <div class="flex-item_1">
+                  <a :href="link.FL_2U_Month_Intro_Video_Link">
+                    <img style='height: auto; width: 100%; object-fit: contain' :src="link.FL_2U_Month_Intro_Video_Thumbnail">
+                    </a>
+                </div>
               <div class="flex-item_2">
               <h4><h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Preview Video</h2a></h4>
               <a v-bind:href="link.FL_2U_Month_Intro_Video_Link" target="_blank">Month Preview</a>
@@ -76,6 +81,11 @@
               <h2><h2a :style="{ 'color': link.Title_Font_Color }">3-5<br>
                 {{ link.Month }} Curriculum Links</h2a></h2>
               </div>
+              <div class="flex-item_1">
+                <a :href="link.FL_3to5_Month_Intro_Video_Link">
+                  <img style='height: auto; width: 100%; object-fit: contain' :src="link.FL_3to5_Month_Intro_Video_Thumbnail">
+                  </a>
+              </div>
             <div class="flex-item_2">
               <h4><h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Preview Video</h2a></h4>
               <a v-bind:href="link.FL_3to5_Month_Intro_Video_Link" target="_blank">Month Preview</a>
@@ -91,6 +101,11 @@
                 <div class="flex-item_1">
               <h2><h2a :style="{ 'color': link.Title_Font_Color }">6-10<br>
                 {{ link.Month }} Curriculum Links</h2a></h2>
+              </div>
+              <div class="flex-item_1">
+                <a :href="link.O_252_6to10_Kids_Monthly_Intro_Video_Link">
+                  <img style='height: auto; width: 100%; object-fit: contain' :src="link.O_252_6to10_Kids_Monthly_Intro_Video_Thumbnail">
+                  </a>
               </div>
             <div class="flex-item_2">
               <h4><h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Preview Video</h2a></h4>
