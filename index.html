@@ -1,183 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162798697-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162798697-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-        gtag('config', 'UA-162798697-1');
-    </script>
-    
-    <meta charset="utf-8">
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cur Links</title>
-    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  </head>
-  <body>
-      <div class="flex-container__BaseSp" id="SpAnnounce">
-          <span v-cloak>
-          <br>
-        <div class="flex-container_1" v-for="announce in announcements">
-          <div class="flex-container_SpCard" :style="{ 'backgroundColor': announce.Card_Color }">
-            <div class="flex-item_SpText" :style="{ 'backgroundColor': announce.Box_Color }">
-            <h2><h2a :style="{ 'color': announce.Title_Font_Color }">{{ announce.Special_Announcement_Title }}</h2a></h2>
-            <div style="text-align:center"><span v-html="announce.Special_Announcement_Text"></span></div>
-            <div v-if="announce.Special_Announcement_Link"><br>
-              <a v-bind:href="announce.Special_Announcement_Link" target="_blank">{{ announce.Special_Announcement_Title }} </a>
-            </div>
-            </div>
-            <div class="flex-item_SpItems" :style="{ 'backgroundColor': announce.Box_Color }" 
-            v-if="announce.Special_Announcement_Graphic_Link">
-            <a v-bind:href="announce.Special_Announcement_Link" target="_blank">
-              <img style='height: 100%; width: 100%; object-fit: contain' :src="announce.Special_Announcement_Graphic_Link">
-            </a>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-162798697-1');
+  </script>
+
+  <meta charset="utf-8">
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cur Links</title>
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:500" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+  <div class="flex-container__BaseSp" id="SpAnnounce">
+    <span v-cloak>
+      <br>
+      <div v-for="announce in announcements">
+        <div v-if="announce.Page_on_which_to_show___Home_Page_ === 'Top' ">
+          <div class="flex-container_2A" :style="{ 'backgroundColor': announce.Card_Color }">
+            <div class="grid_Internal">
+              <div class="flex-item_SpText" :style="{ 'backgroundColor': announce.Box_Color }">
+                <h2>
+                  <h2a :style="{ 'color': announce.Title_Font_Color }">
+                    {{ announce.Special_Announcement_Title }}</h2a>
+                </h2>
+                <div style="text-align:center"><span v-html="announce.Special_Announcement_Text"></span>
+                </div>
+                <div v-if="announce.Special_Announcement_Link"><br>
+                  <a v-bind:href="announce.Special_Announcement_Link"
+                    target="_blank">{{ announce.Special_Announcement_Title }} </a>
+                </div>
+              </div>
+              <div class="flex-item_SpItems" :style="{ 'backgroundColor': announce.Box_Color }"
+                v-if="announce.Special_Announcement_Graphic_Link">
+                <a v-bind:href="announce.Special_Announcement_Link" target="_blank">
+                  <img style='height: 100%; width: 100%; object-fit: contain'
+                    :src="announce.Special_Announcement_Graphic_Link">
+                </a>
+              </div>
             </div>
           </div>
           <br>
         </div>
-        </span>
       </div>
-    <br>
-    <br>
-    <div class="flex-container_Base_A" id="CurLinks">
-        <span v-cloak>
-        <div class="flex-container_1"  v-for="link in links">
-          <hr />
-          <hr />
-          <hr />
-          <p style="text-align: center; font-size: 120%; font-weight: bold;
+    </span>
+  </div>
+  <br>
+  <br>
+  <div class="flex-container_Base_A" id="CurLinks">
+    <span v-cloak>
+      <div class="flex-container_1" v-for="link in links">
+        <hr />
+        <hr />
+        <hr />
+        <p style="text-align: center; font-size: 120%; font-weight: bold;
            font-style: italic;line-height: 1.01;">
-           This page is for internal use only for IES Kids Leaders and Teachers.<br>
-           Please do not share or distribute these links or their contents.</p>
-          <hr />
-          <hr />
-          <hr />
-          <br>
-          <br>
-          <div class="flex-container_2A" :style="{ 'backgroundColor': link.Month_Card_Color }">
-              <h2><h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }}</h2a></h2>
-                </div>
-              <br>
-          <div class="flex-container_2A" :style="{ 'backgroundColor': link.Month_Card_Color }">
-            <div class="grid_Internal">
-              <div class="flex-container_3A" :style="{ 'backgroundColor': link.Curriculum_level_box_Color }">
-                <div class="flex-item_1">
-              <h2><h2a :style="{ 'color': link.Title_Font_Color }">3U<br>
-                  {{ link.Month }} Curriculum Links</h2a></h2>
-                </div>
-                <div class="flex-item_1">
-                  <a :href="link.FL_2U_Month_Intro_Video_Link" target="_blank">
-                    <img style='height: auto; width: 100%; object-fit: contain' :src="link.FL_2U_Month_Intro_Video_Thumbnail">
-                    </a>
-                </div>
+          This page is for internal use only for IES Kids Leaders and Teachers.<br>
+          Please do not share or distribute these links or their contents.</p>
+        <hr />
+        <hr />
+        <hr />
+        <br>
+        <br>
+        <div class="flex-container_2A" :style="{ 'backgroundColor': link.Month_Card_Color }">
+          <h2>
+            <h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }}</h2a>
+          </h2>
+        </div>
+        <br>
+        <div class="flex-container_2A" :style="{ 'backgroundColor': link.Month_Card_Color }">
+          <div class="grid_Internal">
+            <div class="flex-container_3A" :style="{ 'backgroundColor': link.Curriculum_level_box_Color }">
+              <div class="flex-item_1">
+                <h2>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">3U<br>
+                    {{ link.Month }} Curriculum Links</h2a>
+                </h2>
+              </div>
+              <div class="flex-item_1">
+                <a :href="link.FL_2U_Month_Intro_Video_Link" target="_blank">
+                  <img style='height: auto; width: 100%; object-fit: contain'
+                    :src="link.FL_2U_Month_Intro_Video_Thumbnail">
+                </a>
+              </div>
               <div class="flex-item_2">
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Preview Video</h2a></h4>
-              <a v-bind:href="link.FL_2U_Month_Intro_Video_Link" target="_blank">Month Preview</a>
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">Leader Manuals</h2a></h4>
-              <span style="font-size: 100%;"><a v-bind:href="link.FL_2U_Leader_Manual_Compete_Link" target="_blank">Leader Manual Complete</a><br>
-              <a v-bind:href="link.FL_2U_Leader_Manual_Link" target="_blank">Leader Manual only</a><br>
-              <a v-bind:href="link.FL_2U_Activity_Pages_Link" target="_blank">Activity Pages</a></span>
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">Other Resources</h2a></h4>
-              <a v-bind:href="link.FL_2U_Music_Folder_Link" target="_blank">Music Resources</a>
-              <a v-bind:href="link.Other_2U_Resource_Links" target="_blank">Opening Games, Bible Memory & Closing</a>
-                </div>
-                <div class="flex-item_1"><span style="font-size: 50%">Curriculum is secured in Google Drive by your inclusion in this Team's Google Group. 
-                  To access, you must first accept your group invitation. To request a new invitation, please email 
-                  <a href="mailto:patty@iesjakarta.org?subject=New%203U%20Team%20Google%20Groups%20invitation"target="_top">patty@iesjakarta.org 
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Preview Video</h2a>
+                </h4>
+                <a v-bind:href="link.FL_2U_Month_Intro_Video_Link" target="_blank">Month Preview</a>
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">Leader Manuals</h2a>
+                </h4>
+                <span style="font-size: 100%;"><a v-bind:href="link.FL_2U_Leader_Manual_Compete_Link"
+                    target="_blank">Leader Manual Complete</a><br>
+                  <a v-bind:href="link.FL_2U_Leader_Manual_Link" target="_blank">Leader Manual only</a><br>
+                  <a v-bind:href="link.FL_2U_Activity_Pages_Link" target="_blank">Activity Pages</a></span>
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">Other Resources</h2a>
+                </h4>
+                <a v-bind:href="link.FL_2U_Music_Folder_Link" target="_blank">Music Resources</a>
+                <a v-bind:href="link.Other_2U_Resource_Links" target="_blank">Opening Games, Bible Memory & Closing</a>
+              </div>
+              <div class="flex-item_1"><span style="font-size: 50%">Curriculum is secured in Google Drive by your
+                  inclusion in this Team's Google Group.
+                  To access, you must first accept your group invitation. To request a new invitation, please email
+                  <a href="mailto:patty@iesjakarta.org?subject=New%203U%20Team%20Google%20Groups%20invitation"
+                    target="_top">patty@iesjakarta.org
                   </a>to inform us of the Google account(s) you would like added to the group.
                 </span></div>
-              </div>
-              <div class="flex-container_3A" :style="{ 'backgroundColor': link.Curriculum_level_box_Color }">
-                <div class="flex-item_1">
-              <h2><h2a :style="{ 'color': link.Title_Font_Color }">4-5<br>
-                {{ link.Month }} Curriculum Links</h2a></h2>
+            </div>
+            <div class="flex-container_3A" :style="{ 'backgroundColor': link.Curriculum_level_box_Color }">
+              <div class="flex-item_1">
+                <h2>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">4-5<br>
+                    {{ link.Month }} Curriculum Links</h2a>
+                </h2>
               </div>
               <div class="flex-item_1">
                 <a :href="link.FL_3to5_Month_Intro_Video_Link" target="_blank">
-                  <img style='height: auto; width: 100%; object-fit: contain' :src="link.FL_3to5_Month_Intro_Video_Thumbnail">
-                  </a>
+                  <img style='height: auto; width: 100%; object-fit: contain'
+                    :src="link.FL_3to5_Month_Intro_Video_Thumbnail">
+                </a>
               </div>
-            <div class="flex-item_2">
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Preview Video</h2a></h4>
-              <a v-bind:href="link.FL_3to5_Month_Intro_Video_Link" target="_blank">Month Preview</a>
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">Leader Manuals</h2a></h4>
-              <span style="font-size: 100%;"><a v-bind:href="link.FL_3to5_Leader_Manual_Compete_Link" target="_blank">Leader Manual Complete </a><br>
-              <a v-bind:href="link.FL_3to5_Leader_Manual_Link" target="_blank">Leader Manual Only</a><br>
-              <a v-bind:href="link.FL_3to5_Activity_Pages_Link" target="_blank">Activity Pages</a></span>
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">Other Resources</h2a></h4>
-              <a v-bind:href="link.FL_3to5_Music_Folder_Link" target="_blank">Music Resources</a>
-                </div>
-                <div class="flex-item_1"><span style="font-size: 50%">Curriculum is secured in Google Drive by your inclusion in this Team's Google Group. 
-                  To access, you must first accept your group invitation. To request a new invitation, please email 
-                  <a href="mailto:patty@iesjakarta.org?subject=New%204%20to%205%20Team%20Google%20Groups%20invitation"target="_top">patty@iesjakarta.org 
+              <div class="flex-item_2">
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Preview Video</h2a>
+                </h4>
+                <a v-bind:href="link.FL_3to5_Month_Intro_Video_Link" target="_blank">Month Preview</a>
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">Leader Manuals</h2a>
+                </h4>
+                <span style="font-size: 100%;"><a v-bind:href="link.FL_3to5_Leader_Manual_Compete_Link"
+                    target="_blank">Leader Manual Complete </a><br>
+                  <a v-bind:href="link.FL_3to5_Leader_Manual_Link" target="_blank">Leader Manual Only</a><br>
+                  <a v-bind:href="link.FL_3to5_Activity_Pages_Link" target="_blank">Activity Pages</a></span>
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">Other Resources</h2a>
+                </h4>
+                <a v-bind:href="link.FL_3to5_Music_Folder_Link" target="_blank">Music Resources</a>
+              </div>
+              <div class="flex-item_1"><span style="font-size: 50%">Curriculum is secured in Google Drive by your
+                  inclusion in this Team's Google Group.
+                  To access, you must first accept your group invitation. To request a new invitation, please email
+                  <a href="mailto:patty@iesjakarta.org?subject=New%204%20to%205%20Team%20Google%20Groups%20invitation"
+                    target="_top">patty@iesjakarta.org
                   </a>to inform us of the Google account(s) you would like added to the group.
                 </span></div>
-              </div>
-              <div class="flex-container_3A" :style="{ 'backgroundColor': link.Curriculum_level_box_Color }">
-                <div class="flex-item_1">
-              <h2><h2a :style="{ 'color': link.Title_Font_Color }">6-10<br>
-                {{ link.Month }} Curriculum Links</h2a></h2>
+            </div>
+            <div class="flex-container_3A" :style="{ 'backgroundColor': link.Curriculum_level_box_Color }">
+              <div class="flex-item_1">
+                <h2>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">6-10<br>
+                    {{ link.Month }} Curriculum Links</h2a>
+                </h2>
               </div>
               <div class="flex-item_1">
                 <a :href="link.O_252_6to10_Kids_Monthly_Intro_Video_Link" target="_blank">
-                  <img style='height: auto; width: 100%; object-fit: contain' :src="link.O_252_6to10_Kids_Monthly_Intro_Video_Thumbnail">
-                  </a>
+                  <img style='height: auto; width: 100%; object-fit: contain'
+                    :src="link.O_252_6to10_Kids_Monthly_Intro_Video_Thumbnail">
+                </a>
               </div>
-            <div class="flex-item_2">
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Preview Video</h2a></h4>
-              <a v-bind:href="link.O_252_6to10_Kids_Monthly_Intro_Video_Link" target="_blank">Month Preview</a>
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">Leader Manuals</h2a></h4>
-              <span style="font-size: 100%;"><a v-bind:href="link.O_252_6to10_Kids_Leader_Manual_Compete_Link" target="_blank">Leader Manual Complete</a><br>
-              <a v-bind:href="link.O_252_6to10_Kids_Leader_Manual_Link" target="_blank">Leader Manual only</a></span>
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">Other Resources</h2a></h4>
-              <a v-bind:href="link.O_252_6to10_Kids_Music_Folder_Link" target="_blank">Music Resources</a>
-              <a v-bind:href="link.O_252_6to10_Kids_Activity_Pages_Link" target="_blank">Activity Pages</a>
-                </div>
-                <div class="flex-item_1"><span style="font-size: 50%">Curriculum is secured in Google Drive by your inclusion in this Team's Google Group. 
-                  To access, you must first accept your group invitation. To request a new invitation, please email 
-                  <a href="mailto:patty@iesjakarta.org?subject=New%206%20to%2010%20Team%20Google%20Groups%20invitation"target="_top">patty@iesjakarta.org 
+              <div class="flex-item_2">
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Preview Video</h2a>
+                </h4>
+                <a v-bind:href="link.O_252_6to10_Kids_Monthly_Intro_Video_Link" target="_blank">Month Preview</a>
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">Leader Manuals</h2a>
+                </h4>
+                <span style="font-size: 100%;"><a v-bind:href="link.O_252_6to10_Kids_Leader_Manual_Compete_Link"
+                    target="_blank">Leader Manual Complete</a><br>
+                  <a v-bind:href="link.O_252_6to10_Kids_Leader_Manual_Link" target="_blank">Leader Manual
+                    only</a></span>
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">Other Resources</h2a>
+                </h4>
+                <a v-bind:href="link.O_252_6to10_Kids_Music_Folder_Link" target="_blank">Music Resources</a>
+                <a v-bind:href="link.O_252_6to10_Kids_Activity_Pages_Link" target="_blank">Activity Pages</a>
+              </div>
+              <div class="flex-item_1"><span style="font-size: 50%">Curriculum is secured in Google Drive by your
+                  inclusion in this Team's Google Group.
+                  To access, you must first accept your group invitation. To request a new invitation, please email
+                  <a href="mailto:patty@iesjakarta.org?subject=New%206%20to%2010%20Team%20Google%20Groups%20invitation"
+                    target="_top">patty@iesjakarta.org
                   </a>to inform us of the Google account(s) you would like added to the group.
                 </span></div>
-              </div>
-              <div class="flex-container_3A" :style="{ 'backgroundColor': link.Curriculum_level_box_Color }">
-                <div class="flex-item_1">
-              <h2><h2a :style="{ 'color': link.Title_Font_Color }">PreTeens<br>
-                {{ link.Month }} Curriculum Links</h2a></h2>
-              </div>
-            <div class="flex-item_2">
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Leader Manuals</h2a></h4>
-              <span style="font-size: 100%;"><a v-bind:href="link.Week_1_All_In_One" target="_blank">Week 1 - All in one.pdf</a><br>
-              <a v-bind:href="link.Week_2_All_In_One" target="_blank">Week 2 - All in one.pdf</a></span>
-              <a v-bind:href="link.Week_3_All_In_One" target="_blank">Week 3 - All in one.pdf</a>
-              <a v-bind:href="link.Week_4_All_In_One" target="_blank">Week 4 - All in one.pdf</a>
-              <a v-if="link.Week_5_All_In_One !== null" v-bind:href="link.Week_5_All_In_One" target="_blank">Week 5 - All in one.pdf</a>
-              <h4><h2a :style="{ 'color': link.Title_Font_Color }">Other Resources</h2a></h4>
-              <a v-bind:href="link.Resources_Folder" target="_blank">Resources Folder</a>
             </div>
-            <div class="flex-item_1"><span style="font-size: 50%">Curriculum is secured in Google Drive by your inclusion in this Team's Google Group. 
-              To access, you must first accept your group invitation. To request a new invitation, please email 
-              <a href="mailto:patty@iesjakarta.org?subject=New%20PreTeens%20Team%20Google%20Groups%20invitation"target="_top">patty@iesjakarta.org 
-              </a>to inform us of the Google account(s) you would like added to the group.
-            </span></div>
+            <div class="flex-container_3A" :style="{ 'backgroundColor': link.Curriculum_level_box_Color }">
+              <div class="flex-item_1">
+                <h2>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">PreTeens<br>
+                    {{ link.Month }} Curriculum Links</h2a>
+                </h2>
               </div>
+              <div class="flex-item_2">
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">{{ link.Month }} Leader Manuals</h2a>
+                </h4>
+                <span style="font-size: 100%;"><a v-bind:href="link.Week_1_All_In_One" target="_blank">Week 1 - All in
+                    one.pdf</a><br>
+                  <a v-bind:href="link.Week_2_All_In_One" target="_blank">Week 2 - All in one.pdf</a></span>
+                <a v-bind:href="link.Week_3_All_In_One" target="_blank">Week 3 - All in one.pdf</a>
+                <a v-bind:href="link.Week_4_All_In_One" target="_blank">Week 4 - All in one.pdf</a>
+                <a v-if="link.Week_5_All_In_One !== null" v-bind:href="link.Week_5_All_In_One" target="_blank">Week 5 -
+                  All in one.pdf</a>
+                <h4>
+                  <h2a :style="{ 'color': link.Title_Font_Color }">Other Resources</h2a>
+                </h4>
+                <a v-bind:href="link.Resources_Folder" target="_blank">Resources Folder</a>
               </div>
+              <div class="flex-item_1"><span style="font-size: 50%">Curriculum is secured in Google Drive by your
+                  inclusion in this Team's Google Group.
+                  To access, you must first accept your group invitation. To request a new invitation, please email
+                  <a href="mailto:patty@iesjakarta.org?subject=New%20PreTeens%20Team%20Google%20Groups%20invitation"
+                    target="_top">patty@iesjakarta.org
+                  </a>to inform us of the Google account(s) you would like added to the group.
+                </span></div>
             </div>
-            </div>
-              <br>
-          </span>
+          </div>
         </div>
+      </div>
+      <br>
+    </span>
+  </div>
+
+  <div class="flex-container__Base_A" id="SpAnnounceB">
+    <span v-cloak>
+      <br>
+      <div v-for="announce in announcementsB">
+        <div v-if="announce.Page_on_which_to_show___Home_Page_ === 'Bottom' ">
+          <div class="flex-container_2A" :style="{ 'backgroundColor': announce.Card_Color }">
+            <div class="grid_Internal">
+              <div class="flex-item_SpText" :style="{ 'backgroundColor': announce.Box_Color }">
+                <h2>
+                  <h2a :style="{ 'color': announce.Title_Font_Color }">
+                    {{ announce.Special_Announcement_Title }}</h2a>
+                </h2>
+                <div style="text-align:center"><span v-html="announce.Special_Announcement_Text"></span>
+                </div>
+                <div v-if="announce.Special_Announcement_Link"><br>
+                  <a v-bind:href="announce.Special_Announcement_Link"
+                    target="_blank">{{ announce.Special_Announcement_Title }} </a>
+                </div>
+              </div>
+              <div class="flex-item_SpItems" :style="{ 'backgroundColor': announce.Box_Color }"
+                v-if="announce.Special_Announcement_Graphic_Link">
+                <a v-bind:href="announce.Special_Announcement_Link" target="_blank">
+                  <img style='height: 100%; width: 100%; object-fit: contain'
+                    :src="announce.Special_Announcement_Graphic_Link">
+                </a>
+              </div>
+            </div>
+          </div>
+          <br>
         </div>
-  </body>  
-  <script src="https://unpkg.com/vue"></script>
-  <script  language="JavaScript"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="vueCommon.js"></script>
+      </div>
+    </span>
+  </div>
+</div>
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script language="JavaScript"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="vueCommon.js"></script>
+
 </html>
